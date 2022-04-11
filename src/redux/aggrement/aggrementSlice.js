@@ -4,7 +4,9 @@ import axios from "axios";
 export const getAggrement = createAsyncThunk("get/getAggrement", async () => {
     const res = await axios.get(
         `${process.env.REACT_APP_API_BASE_POINT}/payment`
-    );
+    ).catch((err) => {
+        console.log(err);
+    });
 
     return res.data
 });

@@ -9,7 +9,6 @@ export const amountSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      console.log(action.payload)
       state.amount += Number(action.payload.amount);
       state.cart.push({ id:action.payload.id, name: action.payload.name, amount: action.payload.amount });
       state.ids.push(action.payload.id);

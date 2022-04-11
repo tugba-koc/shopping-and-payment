@@ -4,7 +4,9 @@ import axios from "axios";
 
 export const sendCard = createAsyncThunk("post/postCard", async (cardDetails) => {
     const res = await axios.post(
-        `${process.env.REACT_APP_API_BASE_POINT}/payment`, cardDetails)
+        `${process.env.REACT_APP_API_BASE_POINT}/payment`, cardDetails).catch((err) => {
+            console.log(err);
+        });
     return res;
 });
 
