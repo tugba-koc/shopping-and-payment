@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { handleChange, selectUser, sendUser, selectStatus } from "../../redux/user/userSlice";
 import "./styled.scss";
 import Spinner from '../Spinner/Spinner';
+import Error from '../Error/Error';
 
 function LoginForm() {
 
@@ -28,7 +29,7 @@ function LoginForm() {
 
   const onFinish = (values) => {
     dispatch(handleChange(values));
-    dispatch(sendUser(user));
+    dispatch(sendUser(JSON.stringify(user))); 
     setRedirect(true)
   };
 
@@ -41,6 +42,8 @@ function LoginForm() {
 
   if (status === "loading") {
     return <Spinner />
+  } else if(status === "failed") {
+    return <Error />
   }
   return (
     <>

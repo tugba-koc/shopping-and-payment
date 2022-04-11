@@ -33,17 +33,17 @@ function Card({ item, index }) {
           </h3>
         </div>
         <ul className="package-card-detail">
-          {item.details.map(el => (
-            <>
+          {item.details.map((el,index) => (
+            <React.Fragment key={index}>
               <li>{el}</li>
-            </>
+            </React.Fragment>
           ))}
         </ul>
         <ul className="package-card-detail tag">
-          {item.tags.map(el => (
-            <>
+          {item.tags.map((el,index) => (
+            <React.Fragment key={index}>
               <li>{el}</li>
-            </>
+            </React.Fragment>
           ))}
         </ul>
       </div>

@@ -4,9 +4,9 @@ import axios from "axios";
 export const getPackages = createAsyncThunk("get/getPackages", async () => {
     const res = await axios.get(
         `${process.env.REACT_APP_API_BASE_POINT}/packages`
-    );
-
-    console.log(res.data);
+    ).catch(err=>{
+        console.log(err)
+    })
     return res.data
 });
 

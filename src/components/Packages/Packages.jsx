@@ -8,7 +8,7 @@ import Amount from '../Amount/Amount';
 import Card from '../Card/Card';
 import Error from '../Error/Error';
 import { Row, Col } from 'antd';
-import "./styled.scss";
+import "./styled.scss"
 
 function Packages() {
 
@@ -24,7 +24,7 @@ function Packages() {
   }, [dispatch, status])
 
 
-  const style ={
+  const style = {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
@@ -36,17 +36,18 @@ function Packages() {
     return <Error />
   }
   return (
-    <div className="main" style={style}>
-      <Row  gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 },24]}>
-        {items.map((item, index) => (
-          <Col offset={2}>
-            <Card item={item} index={index} />
-          </Col>
-        ))}
-      </Row>
-
+    <>
+      <div className="main-all-packages" style={style}>
+        <Row style={{marginLeft: "0", marginRight: "0"}} gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 24]}>
+          {items.map((item) => (
+            <Col key={item.id} offset={2}>
+              <Card item={item} />
+            </Col>
+          ))}
+        </Row>
+      </div>
       <Amount />
-    </div>
+    </>
   )
 }
 
