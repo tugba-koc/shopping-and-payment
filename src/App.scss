@@ -19,21 +19,20 @@ $main-color : rgb(225, 225, 225);
     font-family: 'Open Sans', sans-serif;
 }
 
-.main-wrapper--success {
-    height: 100vh;
+.success-outer  {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90vh;
 }
 
 .success-inner {
-    width: auto;
+    width: 400px;
     height: 300px;
-    display: flex;
-    justify-content: center;
+   
+
     flex-direction: column;
-    padding: 20px 80px;
+    padding: 60px 80px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
