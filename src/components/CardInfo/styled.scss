@@ -1,0 +1,23 @@
+.login-form {
+    width: 100% !important;
+}
+
+.ant-form label {
+    margin-bottom: 5px !important;
+}
+
+.main-wrapper--card-info {
+    padding: 20px;
+    background-color: white;
+    margin-top: 50px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#normal_login {
+    box-shadow: none;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+}

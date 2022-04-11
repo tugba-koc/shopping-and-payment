@@ -1,12 +1,44 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+}
+
+$main-color : rgb(225, 225, 225);
+
 .App {
+    background-color: $main-color;
+}
+
+.main-wrapper--loginForm {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(240, 240, 240);
+    font-family: 'Open Sans', sans-serif;
 }
 
-@font-face {
-    font-family: 'Open Sans', sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.main-wrapper--success {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.success-inner {
+    width: auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 80px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+

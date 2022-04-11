@@ -1,0 +1,84 @@
+.package-card-image {
+    height : 150px;
+}
+
+.main-package-card {
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    width: 470px;
+    display: inline-flex;
+    // margin: 20px 0;
+}
+
+// .main-package-card:nth-child(2n-1) {
+//     margin-right: 20px;
+//     margin-left: 60px;
+// }
+
+// .main-package-card:nth-child(2n) {
+//     margin-left: 20px;
+// }
+
+.package-card-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.package-card--general-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0 0 0;  
+} 
+
+.package-card-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.package-card-detail {
+    padding-left: 20px !important;
+ 
+}
+
+li {
+    width: 20%;
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+h3.package-card-title.amount {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+ul.package-card-detail.tag li {
+    list-style-type: none;
+    background-color: rgb(170, 170, 170);
+    width: fit-content;
+    padding: 3px 8px;
+    border-radius: 5px;
+
+}
+
+ul.package-card-detail.tag li:first-child {
+    margin-left: 0 !important;
+
+}
+
+
+ul.package-card-detail.tag {
+    padding-left: 0px !important;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(148, 148, 148);
+    margin-bottom: 0 !important;
+    margin-left: 20px;
+    margin-right: 20px !important;
+}
+
+.selected {
+    border: 1px solid red
+}

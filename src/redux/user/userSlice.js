@@ -4,14 +4,14 @@ import axios from "axios";
 
 export const sendUser = createAsyncThunk("post/postUser", async (user) => {
     const res = await axios.post(
-        `${process.env.REACT_APP_API_BASE_POINT}/signup`, user).catch(err => console.log(err));
+        `${process.env.REACT_APP_API_BASE_POINT}/signup`, user)
     return res;
 });
 
 export const usersSlice = createSlice({
     name: "user",
     initialState: {
-        users: {
+        users: { 
             "fullName": "",
             "email": ""
         },
@@ -22,18 +22,13 @@ export const usersSlice = createSlice({
         handleChange: (state, action) => {
             state.users["fullName"] = action.payload.fullName;
             state.users["email"] = action.payload.email;
-            let cacheName = 'user';
-            let data = state.users["fullName"];
-            caches.open(cacheName).then(cache => {
-                cache.add(data).then(() => {
-                    console.log("Data cached ")
-                }).catch(err => console.log(err));
-            });
         },
     },
     extraReducers: {
         [sendUser.pending]: (state, action) => {
             state.status = "loading";
+            state.users["fullName"] = action.payload.fullName;
+            state.users["email"] = action.payload.email;
         },
         [sendUser.fulfilled]: (state, action) => {
             state.status = "succeeded";

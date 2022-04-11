@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./user/userSlice"
-import paymentSlice from "./payment/paymentSlice"
+import packageSlice from "./package/packageSlice"
+import amountSlice from "./amount/amountSlice"
+import aggrementSlice from "./aggrement/aggrementSlice";
 
 export const store = configureStore({
     reducer:{
         user : userSlice,
-        payment : paymentSlice
+        package : packageSlice,
+        amount : amountSlice,
+        aggrement: aggrementSlice
     }
 })

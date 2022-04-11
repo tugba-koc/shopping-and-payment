@@ -1,0 +1,12 @@
+.main-wrapper-amount {
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(180, 180, 180);
+}
+
+.ant-btn.ant-btn-block {
+    width: 20% !important;
+}

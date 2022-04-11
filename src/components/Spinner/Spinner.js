@@ -4,12 +4,12 @@ import { Spin } from 'antd';
 function Spinner() {
 
     const spinnerStyle = {
-        margin: "20px 0",
         marginBottom: "20px",
-        padding: "30px 50px",
+        padding: "50px 50px",
         textAlign: "center",
-        background: "rgba(0, 0, 0, 0.05)",
-        borderRadius: "4px"
+        background: "transparent",
+        borderRadius: "4px",
+        width: "100%",
     };
 
     return (
